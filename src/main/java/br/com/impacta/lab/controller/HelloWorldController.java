@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
 
 	@GetMapping("hello")
-	public ResponseEntity<String> helloWorld(@RequestParam(name="nome", required=false) String nome) {
+	public ResponseEntity<?> helloWorld(@RequestParam(name="nome", required=false) String nome) {
 		//a variável nome, contém o valor passado no browser na sua chamada
 		//Exemplo http://localhost:8080/atividades/hello?nome=felipe
 		//Considerando o exemplo acima a variável nome virá preenchida com o texto "felipe"
@@ -20,8 +20,19 @@ public class HelloWorldController {
 		//palavra Hello world concatenada com o nome.
 		//Exmeplo de resposta: Hello world felipe !
 		
+    String texto = "Hello world";
+
+    texto = texto + " Flávia !";
+
+    String texto1 = "Azul";
+
+    String texto3 = "Azul";
+
+    String texto5 = new String("Azul");
+
+    boolean comparacao = texto1.equals(texto5);
 		
-		return ResponseEntity.ok("Hello world !");
+		return ResponseEntity.ok(texto);
 	}
 	
 }
