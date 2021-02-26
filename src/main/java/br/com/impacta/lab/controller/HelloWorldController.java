@@ -20,9 +20,9 @@ public class HelloWorldController {
 		//palavra Hello world concatenada com o nome.
 		//Exmeplo de resposta: Hello world felipe !
 		
-    String texto = "Hello world";
+    String texto = "Hello world ";
 
-    texto = texto + " Flávia !";
+    texto = texto + nome + " !";
 
     String texto1 = "Azul";
 
